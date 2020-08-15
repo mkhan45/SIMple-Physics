@@ -1,8 +1,8 @@
 ---
 title: Collisions Lab
 date: 2020-08-14 10:15:00 -0500
-categories: [SIMple_Mechanics]
-tags: [mechanics]
+categories: [SIMple_Mechanics, Labs]
+tags: [mechanics, labs, tutorials]
 math: true
 ---
 
