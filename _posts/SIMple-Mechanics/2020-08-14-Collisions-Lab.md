@@ -3,7 +3,10 @@ title: Collisions Lab
 date: 2020-08-14 10:15:00 -0500
 categories: [SIMple_Mechanics]
 tags: [mechanics]
+math: true
 ---
+
+## Setup
 
 Load the `collisionlab.lua` file using the "Load World" button in the top menu:
 ![load world]({{"/assets/img/tutorials/load_world.png"|relative_url}})
@@ -40,4 +43,31 @@ For each of the four rows:
 ![move graph]({{"/assets/gifs/tutorials/move_graph.gif"|relative_url}})
 5. Unpause the scene (graph jittering should be fixed soon)
 ![unpaused]({{"/assets/gifs/tutorials/collisionunpause.gif"|relative_url}})
-6. Save the graphs to a spreadsheet using the "Save Graphs" button at the top. By default, it will save to "graphs.csv" in the folder that you downloaded the program into. Make sure to pause and save the graph while the time of collision is still shown, otherwise it won't get exported.
+6. Save the graphs to a spreadsheet using the "Save Graphs" button at the top. By default, it will save to "graphs.csv" in the folder that you downloaded the program into. Make sure to pause and save the graph while the time of collision is still shown, otherwise it won't get exported. Make sure to rename each CSV file so you remember what row it was on.
+
+___
+
+## Data Analysis:
+
+After exporting each row's graphs, create a new google sheets spreadsheet by opening [sheets.new](https://sheets.new) in your browser. To import each csv file, navigate to File>Import>Upload menu and select the file. On the Import File menu, select "Insert new sheet(s)".
+
+![import sheet]({{"/assets/img/tutorials/import_sheet.png"|relative_url}})
+
+Click the "Import Data" button.
+
+You should have four sheets as shown:
+
+![import sheet]({{"/assets/img/tutorials/sheets.png"|relative_url}})
+
+On each sheet, make a line graph of the data. You should be able to clearly see the collision and identify the before and after velocities:
+![graph sheet]({{"/assets/gifs/tutorials/graph_sheets.gif"|relative_url}})
+
+You should be able to make a data table like so:
+
+<!-- :set nowrap otherwise this table is dumb -->
+
+| Row | Description                    |$$m_A$$(kg)|$$mB$$(kg)|$$V_A$$(m/s)|$$(V_A')$$(m/s)|$$V_B$$(m/s)|$$V_B'$$(m/s)|$$P$$(kgm/s) |$$P'$$(kgm/s)|$$\Delta P\pm$$
+|-----|--------------------------------|-----------|----------|------------|---------------|------------|-------------|-------------|------|----------------------
+|  1  |Purely Elastic $$m_A = m_B$$    |     1     |     1    |      5     |       0       |      0     |      5      |      5      |   5  |      0
+
+To complete the lab, fill out the remaining rows, analyze the data, and write a conclusion explaining what the lab demonstrates. Be sure to write about conservation of momentum and the effect of varying elasticity
