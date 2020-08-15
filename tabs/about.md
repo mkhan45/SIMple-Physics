@@ -8,4 +8,4 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+SIMple Physics is a set of educational physics simulators
