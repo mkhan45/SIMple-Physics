@@ -15,7 +15,7 @@ tagline: Educational Physics Simulators # it will display as the sub-title
 description: >-                        # used by seo meta and the atom feed
     //TODO
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'https://mkhan45.github.io/SIMple-Physics'
+url: 'https://mkhan45.github.io/SIMple-Physics/'
 
 author: Mikail Khan                  # change to your full name
 
@@ -41,7 +41,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
-baseurl: ''
+baseurl: '/SIMple-Physics'
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/New_York
