@@ -8,7 +8,21 @@ tags: [mechanics, tutorials]
 SIMple Mechanics is the simulator meant for the kinematics, projectile motions, and collisions sections of high school physics. 
 
 ## Download/Installation
-`//TODO`
+
+#### Windows
+
+1. Download the latest windows release from the [Github releases page](https://github.com/mkhan45/SIMple-Mechanics/releases/tag/1.0.0). It should be called `SIMple-Mechanics-windows.zip`. 
+2. Unzip the folder in a folder of your choosing. Remember this folder, as this is where you'll find output graphs and sample Lua files.
+3. Run `physics-engine-v2.exe`
+
+#### MacOS
+
+SIMple Mechanics is not currently compiled for MacOS because I don't have a Mac. If you would like to compile it for distribution, contact me at mikail.khan@protonmail.com
+
+#### Linux
+1. Download the latest windows release from the [Github releases page](https://github.com/mkhan45/SIMple-Mechanics/releases/tag/1.0.0). It should be called `SIMple-Mechanics-linux.tar.gz`. 
+2. Unzip the archive in a folder of your choosing. Remember this folder, as this is where you'll find output graphs and sample Lua files.
+3. Run `physics-engine-v2`
 
 ___
 
