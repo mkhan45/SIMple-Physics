@@ -1,0 +1,53 @@
+I"�<p>SIMple Physics is a set of educational physics simulators. It is made to help students and teachers conduct labs and experiments for high school level physics without sophisticated and expensive equipment.</p>
+
+<p>Important goals include:</p>
+
+<ul>
+  <li>Performance even on lower spec’d machines</li>
+  <li>Cross platform</li>
+  <li>Ease of use</li>
+  <li>Free and <a href="https://github.com/mkhan45/SIMple-Physics">Open Source</a></li>
+  <li>Extensibility</li>
+</ul>
+
+<p>SIMple Physics aims to include a separate simulator for each section of high school physics, including:</p>
+
+<ul>
+  <li>✔️ Kinematics, Projectile Motion, and basic Mechanics (SIMple Mechanics) <a href="https://github.com/mkhan45/SIMple-Gravity">Github</a></li>
+  <li>✔️ Universal Gravitation (SIMple Gravity) <a href="https://github.com/mkhan45/SIMple-Mechanics">Github</a></li>
+  <li>❌Electromagnetics and Magnetism</li>
+  <li>❌Waves and Optics</li>
+</ul>
+
+<p>Each simulator has a few core features to help learn and teach physics. For example,</p>
+
+<ul>
+  <li>Save and load preset scenes</li>
+  <li>Graph object properties and export graphs to CSV</li>
+  <li>Extensive documentation and example labs</li>
+</ul>
+
+<p>SIMple Physics was started as my high school senior research project. Unfortunately, because of COVID, I didn’t finish it during the school year. After it became clear that the 2020-2021 school year would also be primarily online, I decided to finish the project and make it useable for real world classes.</p>
+
+<hr />
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To get started, try some <a href="https://mkhan45.github.io/SIMple-Physics/tags/tutorials/">tutorials</a>, or <a href="http://localhost:4000/SIMple-Physics/tags/labs/">complete a lab</a>.</p>
+
+<p>Currently SIMple Mechanics is much more up to date than SIMple Physics.</p>
+
+<hr />
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are welcome. Get started with the issue tracker for each repository on Github. For now the focus is on SIMple Mechanics because that’s the first unit of physics, but soon the improvements to SIMple Mechancs will need to be backported to SIMple Gravity. If you have the time, motivation, and knowledge to make a Electronics and Magnetism or Wave/Optics simulator, contact me at mikail.khan@protonmail.com.</p>
+
+<hr />
+
+<h2 id="technical-details">Technical Details:</h2>
+
+<p>Currently SIMple Gravity and SIMple Physics are written in Rust using <a href="https://github.com/ggez/ggez"><code class="language-plaintext highlighter-rouge">ggez</code></a> and <a href="https://github.com/amethyst/specs"><code class="language-plaintext highlighter-rouge">specs</code></a>. Rust was chosen for its performance, easy cross-platform compilation, and for its potential to compile for the web through WebAssembly.</p>
+
+<p>WebAssembly compilation is a high priority goal. Initially the (naive) expectation was that <code class="language-plaintext highlighter-rouge">ggez</code> would work on the web by the end of the year, but because that hasn’t happened yet, I am exploring a rewrite using a different Rust libraries such as <code class="language-plaintext highlighter-rouge">wgpu-rs</code> and <code class="language-plaintext highlighter-rouge">egui</code> or even using Godot. Such a rewrite will not happen for the forseeable future, but <code class="language-plaintext highlighter-rouge">ggez</code> is seeing some work on WASM compilation so it might not be all that necessary in a few months.</p>
+:ET

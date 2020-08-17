@@ -2,15 +2,6 @@
 title: About
 ---
 
-# SIMple Physics
-
-Metarepo/website for [https://github.com/mkhan45/SIMple-Gravity](https://github.com/mkhan45/SIMple-Gravity) and [https://github.com/mkhan45/SIMple-Mechanics](https://github.com/mkhan45/SIMple-Mechanics)
-
-Using the Chirpy jekyll theme
-https://chirpy.cotes.info/
-
-___
-
 SIMple Physics is a set of educational physics simulators. It is made to help students and teachers conduct labs and experiments for high school level physics without sophisticated and expensive equipment.
 
 Important goals include:
@@ -35,9 +26,24 @@ Each simulator has a few core features to help learn and teach physics. For exam
 - Extensive documentation and example labs
 
 SIMple Physics was started as my high school senior research project. Unfortunately, because of COVID, I didn't finish it during the school year. After it became clear that the 2020-2021 school year would also be primarily online, I decided to finish the project and make it useable for real world classes.
+
 ___
 
-Technical Details:
+## Getting Started
+
+To get started, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](http://localhost:4000/SIMple-Physics/tags/labs/).
+
+Currently SIMple Mechanics is much more up to date than SIMple Physics.
+
+___
+
+## Contributing
+
+Contributions are welcome. Get started with the issue tracker for each repository on Github. For now the focus is on SIMple Mechanics because that's the first unit of physics, but soon the improvements to SIMple Mechancs will need to be backported to SIMple Gravity. If you have the time, motivation, and knowledge to make a Electronics and Magnetism or Wave/Optics simulator, contact me at mikail.khan@protonmail.com.
+
+___
+
+## Technical Details:
 
 Currently SIMple Gravity and SIMple Physics are written in Rust using [`ggez`](https://github.com/ggez/ggez) and [`specs`](https://github.com/amethyst/specs). Rust was chosen for its performance, easy cross-platform compilation, and for its potential to compile for the web through WebAssembly.
 

@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://mkhan45.github.io/SIMple-Physics//SIMple-Physics/sitemap.xml
