@@ -16,8 +16,8 @@ Important goals include:
 
 SIMple Physics aims to include a separate simulator for each section of high school physics, including:
 
-- ✔️ Kinematics, Projectile Motion, and basic Mechanics (SIMple Mechanics) [Github](https://github.com/mkhan45/SIMple-Gravity)
-- ✔️ Universal Gravitation (SIMple Gravity) [Github](https://github.com/mkhan45/SIMple-Mechanics)
+- ✔️ Kinematics, Projectile Motion, and basic Mechanics (SIMple Mechanics) [Github](https://github.com/mkhan45/SIMple-Mechanics)
+- ✔️ Universal Gravitation (SIMple Gravity) [Github](https://github.com/mkhan45/SIMple-Gravity)
 - ❌Electromagnetics and Magnetism
 - ❌Waves and Optics
 
@@ -35,7 +35,7 @@ ___
 
 To get started, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](https://mkha45.github.io/SIMple-Physics/tags/labs/).
 
-Currently SIMple Mechanics is much more up to date than SIMple Physics.
+Currently SIMple Mechanics is much more up to date than SIMple Gravity.
 
 ___
 
