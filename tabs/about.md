@@ -47,6 +47,6 @@ ___
 
 ## Technical Details:
 
-Currently SIMple Gravity and SIMple Physics are written in Rust using [`ggez`](https://github.com/ggez/ggez) and [`specs`](https://github.com/amethyst/specs). Rust was chosen for its performance, easy cross-platform compilation, and for its potential to compile for the web through WebAssembly.
+Currently SIMple Gravity and SIMple Physics are written in Rust using [`ggez`](https://github.com/ggez/ggez), [`specs`](https://github.com/amethyst/specs), [`imgui-rs`](https://github.com/Gekkio/imgui-rs), and [`nphysics`](https://nphysics.org/). Rust was chosen for its performance, easy cross-platform compilation, and for its potential to compile for the web through WebAssembly.
 
 WebAssembly compilation is a high priority goal. Initially the (naive) expectation was that `ggez` would work on the web by the end of the year, but because that hasn't happened yet, I am exploring a rewrite using a different Rust libraries such as `wgpu-rs` and `egui` or even using Godot. Such a rewrite will not happen for the forseeable future, but `ggez` is seeing some work on WASM compilation so it might not be all that necessary in a few months.
