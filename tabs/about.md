@@ -33,7 +33,7 @@ ___
 
 ## Getting Started
 
-To get started, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](http://localhost:4000/SIMple-Physics/tags/labs/).
+To get started, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](https://mkha45.github.io/SIMple-Physics/tags/labs/).
 
 Currently SIMple Mechanics is much more up to date than SIMple Physics.
 
