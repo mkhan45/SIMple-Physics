@@ -83,3 +83,44 @@ You can graph an object's properties. Move the graph by left clicking and draggi
 | A             | Create object centered        |
 | Shift+D       | Delete all objects            |
 | D             | Delete object on sidepanel    |
+
+## Lua
+
+You can create scenes using Lua. Lua is a very simple language so you can probably get started by looking at the defaults in the lua/ folder if you know how to code. The `pinball.lua` example should be a good starting point
+
+There are two important functions:
+
+- `add_shape(shape)` adds a shape
+- `add_shapes(shape1, shape2, ...)` adds many shapes
+
+A shape is a Lua table with the following fields:
+
+|  Name         |    Possible Values            | Default |                  Description                          |
+|---------------|-------------------------------|---------|-------------------------------------------------------|
+| `shape`       | "rect", "circle"              |   N/A   |The shape of the object                                |
+| `status`      | "static", "dynamic"           | dynamic |Static objects are unaffected by physics               |
+| `x`           | Any number                    |   N/A   |The x coordinate of the center of the object           |
+| `y`           | Any number                    |   N/A   |The y coordinate of the center of the object           |
+| `rotation`    | Any number                    |   N/A   |The rotation of the object                             |
+| `x_vel`       | Any number                    |    0    |The x velocity of the object                           |
+| `y_vel`       | Any number                    |    0    |The y velocity of the object                           |
+| `rotvel`      | Any number                    |    0    |The rotational/angular velocity of the object          |
+| `w`           | Any number                    |   N/A   |If the shape is a rectangle, its width                 |
+| `h`           | Any number                    |   N/A   |If the shape is a rectangle, its height                |
+| `r`           | Any number                    |   N/A   |If the shape is a circle, its radius                   |
+| `mass`        | Any number >= 0               |   N/A   |The object's mass                                      |
+| `elasticity`  | A number between 0 and 1      |   0.2   |An object's elasticity/restitution/bounciness          |
+| `friction`    | A number between 0 and 1      |   0.5   |An object's static and dynamic friction coeficient     |
+| `name`        | Any text                      |  Empty  |An object's name, used for graphing                    |
+| `color`       | A table containing {r, g, b}  |  Empty  |The color of the object, RGB values range from 0 to 255|
+
+Values with a default value of N/A are mandatory, except for `w`, `h`, and `r`, which are only mandatory if you are using the corresponding shape.
+
+
+Additionally, there are a few global variables. 
+
+- `GRAVITY` can be modified to change the gravity of the scene. Positive values make things go to the bottom of the screen.
+- `SCREEN_X` is the width of the screen.
+- `SCREEN_Y` is the height of the screen.
+
+For security, the Lua environment is sandboxed. You can only use the base, table, math, and string modules of the standard library. Additionally, there is a memory limit of 256 MB and an instruction limit of 75,000.
