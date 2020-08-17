@@ -4,6 +4,8 @@ title: About
 
 SIMple Physics is a set of educational physics simulators. It is made to help students and teachers conduct labs and experiments for high school level physics without sophisticated and expensive equipment.
 
+Find cool gifs at [https://mkhan45.github.io/SIMple-Physics/posts/Gifs/](https://mkhan45.github.io/SIMple-Physics/posts/Gifs/)
+
 Important goals include:
 
 - Performance even on lower spec'd machines
