@@ -1,6 +1,6 @@
 # SIMple Physics
 
-Metarepo for [https://github.com/mkhan45/gravity-sim-v2](https://github.com/mkhan45/gravity-sim-v2) and [https://github.com/mkhan45/physics-v2](https://github.com/mkhan45/physics-v2)
+Metarepo/website for [https://github.com/mkhan45/SIMple-Gravity](https://github.com/mkhan45/SIMple-Gravity) and [https://github.com/mkhan45/SIMple-Mechanics](https://github.com/mkhan45/SIMple-Mechanics)
 
 Using the Chirpy jekyll theme
 https://chirpy.cotes.info/
@@ -19,8 +19,8 @@ Important goals include:
 
 SIMple Physics aims to include a separate simulator for each section of high school physics, including:
 
-- ✔️ Kinematics, Projectile Motion, and basic Mechanics (SIMple Mechanics) [Github](https://github.com/mkhan45/gravity-sim-v2)
-- ✔️ Universal Gravitation (SIMple Gravity) [Github](https://github.com/mkhan45/physics-v2)
+- ✔️ Kinematics, Projectile Motion, and basic Mechanics (SIMple Mechanics) [Github](https://github.com/mkhan45/SIMple-Gravity)
+- ✔️ Universal Gravitation (SIMple Gravity) [Github](https://github.com/mkhan45/SIMple-Mechanics)
 - ❌Electromagnetics and Magnetism
 - ❌Waves and Optics
 
@@ -30,6 +30,7 @@ Each simulator has a few core features to help learn and teach physics. For exam
 - Graph object properties and export graphs to CSV
 - Extensive documentation and example labs
 
+SIMple Physics was started as my high school senior research project. Unfortunately, because of COVID, I didn't finish it during the school year. After it became clear that the 2020-2021 school year would also be primarily online, I decided to finish the project and make it useable for real world classes.
 ___
 
 Technical Details:
