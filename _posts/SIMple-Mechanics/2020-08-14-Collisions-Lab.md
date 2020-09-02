@@ -6,6 +6,10 @@ tags: [mechanics, labs, tutorials]
 math: true
 ---
 
+The collision lab will help students understand how preservation of momentum works in collisions of various elasticity. While the lab starts with four separate collisions, it is encouraged for students to try other configurations. 
+
+This lab was adapted from TJHSST's collision lab.
+
 ## Setup
 
 Load the `collisionlab.lua` file using the "Load World" button in the top menu:
