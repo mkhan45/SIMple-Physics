@@ -33,9 +33,15 @@ ___
 
 ## Getting Started
 
-To get started, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](https://mkha45.github.io/SIMple-Physics/tags/labs/).
+To install each simulator, follow the corresponding link below:
 
-Currently SIMple Mechanics is much more up to date than SIMple Gravity.
+Mechanics: https://github.com/mkhan45/SIMple-Mechanics/releases
+
+Gravitation: https://github.com/mkhan45/SIMple-Gravity/releases
+
+On the latest version, you should be able to find a zip file corresponding to your OS. To install the simulator, simple download the file, extract it to the desired folder, and run the executable file within.
+
+Once you've got a simulator installed, try some [tutorials](https://mkhan45.github.io/SIMple-Physics/tags/tutorials/), or [complete a lab](https://mkha45.github.io/SIMple-Physics/tags/labs/).
 
 ___
 
