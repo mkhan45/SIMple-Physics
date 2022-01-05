@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%= File.read!("templates/head.html") %>
-    <title>A Basic HTML5 Template</title>
+    <%= render.("templates/head.html.eex") %>
+    <title>SIMple Physics</title>
   </head>
 
-  asdfasdf
-
   <body>
-    <!-- your content here... -->
-    <script src="js/scripts.js"></script>
+    <h1 class="text-center text-6xl mt-16 mb-16"> SIMple Physics </h1>
+
+    <div class="container mx-auto max-w-screen-md">
+      <div class="grid grid-cols-2 justify-center justify-items-center max-w-prose mx-auto">
+        <div class="text-center">
+          <span class="text-xl">Mechanics</span>
+          <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 50">
+            <%= for y <- 0..-4 do %>
+              <%= for x <- -(-4-y)..(-4-y) do %>
+                <rect x="<%= 9 * x %>" y="<%= 9 * y %>" width="8" height="8"/>
+              <% end %>
+            <% end %>
+          </svg>
+        </div>
+        <div class="text-center">
+          <span class="text-xl">Gravity</span>
+          <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 60">
+            <circle r="7.5%" stroke="black"/>
+            <circle cx="40%" r="2%"/>
+            <path d="M40 0 A40,40 0 0 0 0,-40" stroke-width="0.75%" stroke="black" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <%# <script src="js/scripts.js"></script> %>
   </body>
 </html>

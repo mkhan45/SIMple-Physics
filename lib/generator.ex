@@ -1,7 +1,11 @@
 defmodule Generator do
+  @base_url "../"
+  
   @pages [
     "",
   ]
+
+  def base_url(), do: @base_url
 
   def gen_pages() do
     for page <- @pages do

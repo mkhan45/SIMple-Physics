@@ -26,3 +26,7 @@ site-*.tar
 /tmp/
 
 /public
+/static/CSS
+package-lock.json
+package.json
+node_modules

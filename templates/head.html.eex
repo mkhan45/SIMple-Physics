@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="<%= base_url %>/static/CSS/base.css" rel="stylesheet">
+
+<nav class="flex pt-1 pb-1 pl-4 pr-4 sm:justify-center md:justify-between">
+    <span>
+      <a class="text-xl" href="#">SIMple Physics</a>
+    </span>
+
+    <span class="space-x-2">
+      <% links = [
+        {"Labs", "#{base_url}/labs"},
+        {"GitHub #{icons.external_link}", "https://github.com/mkhan45/SIMple-Gravity"},
+      ]%>
+      <%= for {html, url} <- links do %>
+        <%= Components.nav_link(url, html) %>
+      <% end %>
+    </span>
+</nav>
+
+<hr class="mb-6">
