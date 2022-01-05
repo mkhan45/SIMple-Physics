@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= File.read!("templates/head.html") %>
+    <title>A Basic HTML5 Template</title>
+  </head>
+
+  asdfasdf
+
+  <body>
+    <!-- your content here... -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
