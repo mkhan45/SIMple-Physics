@@ -14,7 +14,7 @@ defmodule Site.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :plug_cowboy, :httpoison],
+      extra_applications: [:logger, :plug_cowboy, :httpoison, :remix],
       mod: {ServerApp, []}
     ]
   end
@@ -24,6 +24,8 @@ defmodule Site.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:httpoison, "~> 1.8"},
+      {:math, "~> 0.7.0"},
+      {:remix, "~> 0.0.1", only: :dev},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]

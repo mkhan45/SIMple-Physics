@@ -1,5 +1,6 @@
 defmodule Router do
   use Plug.Router
+  require Math
 
   plug Plug.Static, at: "/static", from: "static"
 

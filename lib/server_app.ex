@@ -16,7 +16,7 @@ defmodule ServerApp do
     ]
 
     opts = [strategy: :one_for_one, name: ServerApp.Supervisor]                         
-    IO.puts("Starting Server...")                                                         
+    IO.puts("Starting Server at http://localhost:4000...")                                                         
     Supervisor.start_link(children, opts)
   end
 end

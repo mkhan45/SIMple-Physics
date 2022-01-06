@@ -6,10 +6,12 @@
   </head>
 
   <body>
-    <h1 class="text-center text-6xl mt-16 mb-16"> SIMple Physics </h1>
+    <h1 class="text-center text-6xl mt-16 mb-16 text-emerald-400 font-semibold"> SIMple Physics </h1>
 
     <div class="container mx-auto max-w-screen-md">
       <div class="grid grid-cols-2 justify-center justify-items-center max-w-prose mx-auto">
+
+        <%# MECHANICS CARD %>
         <div class="text-center">
           <span class="text-xl">Mechanics</span>
           <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 50">
@@ -19,14 +21,64 @@
               <% end %>
             <% end %>
           </svg>
+
+          <div class="mt-4 flex flex-col space-y-1 justify-items-center">
+            <%= Components.link_btn("#", "In Progress") %>
+          </div>
         </div>
+        <%# END MECHANICS CARD %>
+
+        <%# GRAVITY CARD %>
         <div class="text-center">
           <span class="text-xl">Gravity</span>
           <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 60">
             <circle r="7.5%" stroke="black"/>
             <circle cx="40%" r="2%"/>
-            <path d="M40 0 A40,40 0 0 0 0,-40" stroke-width="0.75%" stroke="black" fill="none"/>
+            <%# Not sure why up to 15 is needed %>
+            <%= for i <- 1..15 do %>
+              <% start_x = Math.cos((i - 1) / 10) * 40 %>
+              <% start_y = Math.sin((i - 1) / 10) * -40 %>
+              <% end_x = Math.cos(i / 10) * 40 %>
+              <% end_y = Math.sin(i / 10) * -40 %>
+              <% width = (15 - i) / 15 * 0.75 + 0.15 %>
+              <path 
+                 d="M<%=start_x%>,<%=start_y%> A40,40 0 0 1 <%=end_x%>,<%=end_y%>" 
+                 stroke-width="<%= width %>%" stroke="black" fill="none"
+              />
+            <% end %>
           </svg>
+
+          <div class="mt-4 flex flex-col space-y-1">
+            <%= Components.link_btn("https://mkhan45.github.io/SIMple-Gravity/", "Try It Out") %>
+            <%= Components.link_btn("/tutorials/gravity", "Tutorial") %>
+          </div>
+        </div>
+        <%# END GRAVITY CARD %>
+
+      </div>
+
+      <hr class="mt-6 mb-6 mx-auto bg-emerald-400">
+
+      <div class="grid grid-cols-3 justify-center justify-items-center mx-auto max-w-screen-md gap-5">
+        <div>
+          <h2 class="font-semibold text-lg">Run Interactive Labs</h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg">Code Your Own Simulations</h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg">???</h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
       </div>
     </div>

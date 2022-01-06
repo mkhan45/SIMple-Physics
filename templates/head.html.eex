@@ -11,7 +11,7 @@
 
     <span class="space-x-2">
       <% links = [
-        {"Labs", "#{base_url}/labs"},
+        {"Labs", "#{base_url}labs"},
         {"GitHub #{icons.external_link}", "https://github.com/mkhan45/SIMple-Gravity"},
       ]%>
       <%= for {html, url} <- links do %>
