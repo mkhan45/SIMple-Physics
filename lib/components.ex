@@ -34,4 +34,13 @@ defmodule Components do
         </div>
     """
   end
+
+  def ul_link(url, title) do
+    ~e"""
+        <a class="hover:underline decoration-2 decoration-emerald-400 
+                  border-l-2 border-emerald-400 pl-1.5" href="#{url}">
+          #{title}
+        </a>
+    """
+  end
 end

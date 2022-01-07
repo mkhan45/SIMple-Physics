@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<% import Components %>
+<html lang="en">
+  <head>
+    <%= render.("templates/head.html.eex") %>
+    <title>SIMple Physics</title>
+  </head>
+
+  <body>
+    <div class="grid grid-cols-3">
+      <div class="container ml-6">
+        <h2 class="mt-14 text-xl font-semibold"> Categories </h2>
+        <ul class="">
+          <li class="mb-1"><%= ul_link("/labs", "All") %></li>
+          <li class="mb-1"><%= ul_link("/labs/Gravity", "Gravity") %></li>
+          <li class="mb-1"><%= ul_link("/labs/Mechanics", "Mechanics") %></li>
+        </ul>
+      </div>
+      <div class="container mx-auto max-w-prose">
+        <h2 class="text-3xl font-semibold"> Labs </h2>
+        <%= if Enum.empty?(labs) do %>
+          <p>More labs coming soon</p>
+        <% else %>
+          <%= for lab <- labs do %>
+            <a href="labs/<%= lab |> Lab.url %>">
+              <div class="mt-6 p-5 bg-emerald-200">
+                <h3 class="text-xl font-semibold"> 
+                  <%= lab |> Lab.title() %> 
+                </h3>
+                <h4 class="text-xs mb-2"> 
+                  <%= lab |> Lab.categories() |> Enum.join(", ") %>
+                </h4>
+                <p> 
+                <%= lab |> Lab.description() %>..
+                </p>
+              </div>
+            </a>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>

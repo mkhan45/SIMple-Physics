@@ -1,11 +1,12 @@
 defmodule Generator do
-  @base_url "."
-  
   @pages [
     "",
+    "labs",
+    "labs/Gravity",
+    "labs/Mechanics",
   ]
 
-  def base_url(), do: @base_url
+  def base_url(), do: System.get_env() |> Access.get("BASE_URL", "")
 
   def gen_pages() do
     for page <- @pages do

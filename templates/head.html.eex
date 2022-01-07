@@ -6,12 +6,12 @@
 
 <nav class="flex pt-1 pb-1 pl-4 pr-4 sm:justify-center md:justify-between items-center">
     <span>
-      <a class="text-2xl text-emerald-400 font-semibold" href="#">SIMple Physics</a>
+      <a class="text-2xl font-semibold" href="/">SIMple Physics</a>
     </span>
 
     <span class="space-x-2">
       <% links = [
-        {"Labs", "#{base_url}labs"},
+        {"Labs", "#{base_url}/labs"},
         {
           "GitHub <span class='-top-0.5 relative'>#{icons.external_link}</span>", 
           "https://github.com/mkhan45/SIMple-Gravity",
