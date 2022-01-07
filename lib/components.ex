@@ -4,7 +4,7 @@ defmodule Components do
 
   def nav_link(url, inner) do
     ~e"""
-    <a href="#{url}">
+    <a href="#{url}" class="font-semibold">
       #{inner}
     </a>
     """
@@ -23,6 +23,15 @@ defmodule Components do
     >
       #{text}
     </a>
+    """
+  end
+
+  def desc_card(name, contents) do
+    ~e"""
+        <div>
+          <h2 class="font-semibold text-lg">#{name}</h2>
+          <p>#{contents}</p>
+        </div>
     """
   end
 end

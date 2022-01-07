@@ -2,7 +2,7 @@ defmodule Router do
   use Plug.Router
   require Math
 
-  plug Plug.Static, at: "/static", from: "static"
+  plug Plug.Static, at: "/static", from: "public/static"
 
   plug(:match)
   plug(:dispatch)
@@ -14,6 +14,7 @@ defmodule Router do
       render: fn(template) -> render(template) end,
       render_args: fn(template, args) -> render(template, args) end,
       components: Components,
+      sigil_e: fn(s, _opts) -> s end,
     ]
 
     args = Keyword.merge(defaults, args)

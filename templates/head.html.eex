@@ -4,15 +4,18 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="<%= base_url %>/static/CSS/base.css" rel="stylesheet">
 
-<nav class="flex pt-1 pb-1 pl-4 pr-4 sm:justify-center md:justify-between">
+<nav class="flex pt-1 pb-1 pl-4 pr-4 sm:justify-center md:justify-between items-center">
     <span>
-      <a class="text-xl" href="#">SIMple Physics</a>
+      <a class="text-2xl text-emerald-400 font-semibold" href="#">SIMple Physics</a>
     </span>
 
     <span class="space-x-2">
       <% links = [
         {"Labs", "#{base_url}labs"},
-        {"GitHub #{icons.external_link}", "https://github.com/mkhan45/SIMple-Gravity"},
+        {
+          "GitHub <span class='-top-0.5 relative'>#{icons.external_link}</span>", 
+          "https://github.com/mkhan45/SIMple-Gravity",
+        },
       ]%>
       <%= for {html, url} <- links do %>
         <%= Components.nav_link(url, html) %>

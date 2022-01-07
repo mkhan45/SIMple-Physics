@@ -1,5 +1,5 @@
 defmodule Generator do
-  @base_url "../"
+  @base_url "."
   
   @pages [
     "",

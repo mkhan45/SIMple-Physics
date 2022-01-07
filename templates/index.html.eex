@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<% import Components %>
 <html lang="en">
   <head>
     <%= render.("templates/head.html.eex") %>
@@ -50,36 +51,49 @@
 
           <div class="mt-4 flex flex-col space-y-1">
             <%= Components.link_btn("https://mkhan45.github.io/SIMple-Gravity/", "Try It Out") %>
-            <%= Components.link_btn("/tutorials/gravity", "Tutorial") %>
+            <%= Components.link_btn("#{base_url}/tutorials/gravity", "Tutorial") %>
           </div>
         </div>
         <%# END GRAVITY CARD %>
 
       </div>
 
-      <hr class="mt-6 mb-6 mx-auto bg-emerald-400">
+      <hr class="mt-6 mb-6 mx-auto"/>
 
       <div class="grid grid-cols-3 justify-center justify-items-center mx-auto max-w-screen-md gap-5">
-        <div>
-          <h2 class="font-semibold text-lg">Run Interactive Labs</h2>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
+        <%= Components.desc_card(
+          "Run Interactive Simulations",
+          ~e"""
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          """
+        )
+        %>
+        <%= Components.desc_card(
+          "Learn from Custom Labs",
+          ~e"""
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          """
+        )
+        %>
+        <%= Components.desc_card(
+          "Code Your Own Physics",
+          ~e"""
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          """
+        )
+        %>
+      </div>
 
-        <div>
-          <h2 class="font-semibold text-lg">Code Your Own Simulations</h2>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
+      <hr class="mt-6 mb-6 mx-auto"/>
 
-        <div>
-          <h2 class="font-semibold text-lg">???</h2>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
+      <div class="container max-w-prose mx-auto">
+        <h2 class="text-center text-3xl text-emerald-400 font-semibold mb-2">
+          What is SIMple Physics? 
+        </h2>
+
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </p>
       </div>
     </div>
 
