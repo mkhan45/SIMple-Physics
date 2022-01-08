@@ -10,8 +10,8 @@ defmodule Components do
     """
   end
 
-  def link_btn(url, text) do
-    animation = if text != "In Progress" do
+  def link_btn(url, text, enabled \\ true) do
+    animation = if enabled do
       "hover:scale-110 transition-all motion-reduce:transform-none"
     else
       ""

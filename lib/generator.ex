@@ -4,6 +4,7 @@ defmodule Generator do
     "labs",
     "labs/Gravity",
     "labs/Mechanics",
+    "in_progress"
   ]
 
   def base_url(), do: System.get_env() |> Access.get("BASE_URL", "")

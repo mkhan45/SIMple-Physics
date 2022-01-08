@@ -45,6 +45,10 @@ defmodule Router do
     send_resp(conn, 200, templated)
   end
 
+  get "/in_progress" do
+    send_resp(conn, 200, "This page is in progress")
+  end
+
   get "/lab/:lab" do
     lab = "content/labs/#{lab}.md"
           |> File.read!()
