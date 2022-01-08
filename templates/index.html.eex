@@ -10,7 +10,8 @@
     <h1 class="text-center text-6xl mt-16 mb-16 text-emerald-400 font-semibold"> SIMple Physics </h1>
 
     <div class="container mx-auto max-w-screen-md">
-      <div class="grid grid-cols-2 justify-center justify-items-center max-w-prose mx-auto">
+      <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 space-y-4 md:space-y-0 
+                   justify-center justify-items-center max-w-prose mx-auto">
 
         <%# MECHANICS CARD %>
         <div class="text-center">
@@ -63,7 +64,9 @@
 
       <hr class="mt-6 mb-6 mx-auto"/>
 
-      <div class="grid grid-cols-3 justify-center justify-items-center mx-auto max-w-screen-md gap-5">
+      <div class="grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1
+                   justify-center justify-items-center 
+                   mx-auto max-w-screen-md gap-5">
         <%= Components.desc_card(
           "Run Interactive Simulations",
           ~e"""

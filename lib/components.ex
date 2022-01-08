@@ -4,7 +4,7 @@ defmodule Components do
 
   def nav_link(url, inner) do
     ~e"""
-    <a href="#{url}" class="font-semibold">
+    <a href="#{url}" class="text-base font-semibold">
       #{inner}
     </a>
     """
@@ -29,8 +29,8 @@ defmodule Components do
   def desc_card(name, contents) do
     ~e"""
         <div>
-          <h2 class="font-semibold text-lg">#{name}</h2>
-          <p>#{contents}</p>
+          <h2 class="text-center md:text-left font-semibold text-lg">#{name}</h2>
+          <p class="max-w-xs">#{contents}</p>
         </div>
     """
   end
@@ -38,9 +38,25 @@ defmodule Components do
   def ul_link(url, title) do
     ~e"""
         <a class="decoration-2 decoration-emerald-400 transition-all duration-75
-                  hover:border-l-4 border-l-2 border-emerald-400 pl-1.5" href="#{url}">
+                  md:hover:border-l-4 md:border-l-2 border-emerald-400 pl-1.5
+                  underline underline-offset-2 decoration-4 decoration-emerald-400
+                  md:no-underline"
+           href="#{url}">
           #{title}
         </a>
+    """
+  end
+
+  def lab_category_list() do
+    ~e"""
+      <div class="mx-auto md:ml-6 md:max-w-xs">
+        <h2 class="md:mt-14 text-xl font-semibold text-center md:text-left"> Categories </h2>
+        <ul class="mx-auto flex flex-row md:flex-col gap-x-2 justify-center">
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs.html", "All") }</li>
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs/Gravity.html", "Gravity") }</li>
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs/Mechanics.html", "Mechanics") }</li>
+        </ul>
+    </div>
     """
   end
 end

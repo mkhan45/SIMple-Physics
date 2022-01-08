@@ -4,9 +4,10 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="<%= base_url %>/static/CSS/base.css" rel="stylesheet">
 
-<nav class="flex pt-1 pb-1 pl-4 pr-4 sm:justify-center md:justify-between items-center">
+<nav class="flex pt-1 pb-1 pl-4 pr-4 justify-center md:justify-between 
+            flex-wrap flex-col md:flex-row md:max-w-full mx-auto text-center items-center">
     <span>
-      <a class="text-2xl font-semibold" href="/">SIMple Physics</a>
+      <a class="text-xl md:text-2xl font-semibold" href="/">SIMple Physics</a>
     </span>
 
     <span class="space-x-2">
