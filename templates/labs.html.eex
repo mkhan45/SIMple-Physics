@@ -7,15 +7,15 @@
   </head>
 
   <body>
-    <div class="md:grid md:grid-rows-1 md:grid-cols-3">
+    <div class="md:grid md:grid-rows-1 md:grid-cols-12">
       <%= lab_category_list() %>
-      <div class="container mx-auto max-w-prose md:col-span-2 px-3">
+      <div class="container mx-auto max-w-prose md:col-span-11 px-3">
         <h2 class="text-3xl font-semibold"> <%= category %> Labs </h2>
         <%= if Enum.empty?(labs) do %>
           <p>More labs coming soon</p>
         <% else %>
           <%= for lab <- labs do %>
-            <a href="lab/<%= lab |> Lab.url %>.html">
+            <a href="<%= base_url %>/lab/<%= lab |> Lab.url() %>.html">
               <div class="mt-6 p-5 bg-emerald-200 
                            outline outline-emerald-200 outline-3 hover:outline-offset-4
                            md:mr-10
