@@ -9,6 +9,8 @@ defmodule Generator do
   def base_url(), do: System.get_env() |> Access.get("BASE_URL", "")
 
   def gen_pages() do
+    System.cmd("tailwind", ["-i", "./CSS/base.css", "-o", "./public/static/CSS/base.css"])
+
     for page <- @pages do
       resp = HTTPoison.get!("localhost:4000/#{page}")
 
