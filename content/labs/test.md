@@ -1,6 +1,6 @@
 # Test Lab
 
-test_lab
+test
 
 ["Gravity", "Mechanics"]
 

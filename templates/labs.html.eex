@@ -22,8 +22,10 @@
           <p>More labs coming soon</p>
         <% else %>
           <%= for lab <- labs do %>
-            <a href="labs/<%= lab |> Lab.url %>">
-              <div class="mt-6 p-5 bg-emerald-200">
+            <a href="lab/<%= lab |> Lab.url %>.html">
+              <div class="mt-6 p-5 bg-emerald-200 
+                          outline outline-emerald-200 outline-3 hover:outline-offset-4
+                          transition-all duration-75">
                 <h3 class="text-xl font-semibold"> 
                   <%= lab |> Lab.title() %> 
                 </h3>

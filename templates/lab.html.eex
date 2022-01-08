@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<% import Components %>
+<html lang="en">
+  <head>
+    <%= render.("templates/head.html.eex") %>
+    <title>SIMple Physics</title>
+  </head>
+
+  <body>
+    <div class="grid grid-cols-3">
+      <div class="container ml-6">
+        <h2 class="mt-14 text-xl font-semibold"> Labs </h2>
+        <ul class="">
+          <li class="mb-1"><%= ul_link("#{base_url}/labs.html", "All") %></li>
+          <li class="mb-1"><%= ul_link("#{base_url}/labs/Gravity.html", "Gravity") %></li>
+          <li class="mb-1"><%= ul_link("#{base_url}/labs/Mechanics.html", "Mechanics") %></li>
+        </ul>
+      </div>
+      <div class="container mx-auto max-w-prose">
+        <h1 class="text-2xl font-semibold"> <%= lab |> Lab.title() %> </h1>
+        <h2 class="text-xs text-emerald-400 font-semibold ml-1"> 
+          <%= lab |> Lab.categories() |> Enum.join(", ") %> 
+        </h2>
+        <hr class="mt-1 mb-3 "/>
+        <div class="lab-content">
+          <%= lab |> Lab.render() %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

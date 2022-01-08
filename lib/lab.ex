@@ -29,4 +29,10 @@ defmodule Lab do
     {"p", _, [description], _} = lab_ast |> Enum.at(3)
     description
   end
+
+  def render(ast) do
+    ast
+    |> Enum.drop(4)
+    |> Earmark.transform()
+  end
 end

@@ -1,6 +1,6 @@
 # Test Lab
 
-test_lab_2
+test2
 
 ["idk", "smth"]
 

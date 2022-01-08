@@ -32,11 +32,18 @@ defmodule Router do
   end
 
   get "/labs/:category" do
-    labs = Lab.get_labs
-           |> Enum.filter(&
-             &1 |> Lab.categories() |> Enum.member?(category)
-           )
-    templated = render("templates/labs.html.eex", labs: labs)
+    templated = render("templates/labs.html.eex", labs: Lab.get_labs())
+
+    send_resp(conn, 200, templated)
+  end
+
+  get "/lab/:lab" do
+    lab = "content/labs/#{lab}.md"
+          |> File.read!()
+          |> EarmarkParser.as_ast()
+          |> then(fn {:ok, ast, _} -> ast end)
+
+    templated = render("templates/lab.html.eex", lab: lab)
 
     send_resp(conn, 200, templated)
   end

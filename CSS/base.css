@@ -5,3 +5,7 @@
 .link-svg {
     display: inline-block !important;
 }
+
+.lab-content p {
+    margin-bottom: 1em;
+}

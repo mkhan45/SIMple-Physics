@@ -11,7 +11,11 @@ defmodule Generator do
   def gen_pages() do
     System.cmd("tailwind", ["-i", "./CSS/base.css", "-o", "./public/static/CSS/base.css"])
 
-    for page <- @pages do
+    lab_pages = Lab.get_labs() 
+            |> Enum.map(&Lab.url/1) 
+            |> Enum.map(fn url -> "lab/#{url}" end)
+
+    for page <- Stream.concat([lab_pages, @pages]) do
       resp = HTTPoison.get!("localhost:4000/#{page}")
 
       page = if page == "", do: "index", else: page
