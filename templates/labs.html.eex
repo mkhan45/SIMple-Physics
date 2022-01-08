@@ -10,7 +10,7 @@
     <div class="md:grid md:grid-rows-1 md:grid-cols-12">
       <%= lab_category_list() %>
       <div class="container mx-auto max-w-prose md:col-span-11 px-3">
-        <h2 class="text-3xl font-semibold"> <%= category %> Labs </h2>
+        <h2 class="text-center mt-4 md:mt-0 md:text-left text-3xl font-semibold"> <%= category %> Labs </h2>
         <%= if Enum.empty?(labs) do %>
           <p>More labs coming soon</p>
         <% else %>

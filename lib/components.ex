@@ -50,7 +50,7 @@ defmodule Components do
   def lab_category_list() do
     ~e"""
       <div class="mx-auto md:ml-6 md:max-w-xs">
-        <h2 class="md:mt-14 text-xl font-semibold text-center md:text-left"> Categories </h2>
+        <h2 class="md:mt-14 text-xl font-semibold text-center md:text-left hidden md:inline-block"> Categories </h2>
         <ul class="mx-auto flex flex-row md:flex-col gap-x-2 justify-center">
           <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs.html", "All") }</li>
           <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs/Gravity.html", "Gravity") }</li>
