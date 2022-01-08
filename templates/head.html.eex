@@ -11,7 +11,7 @@
 
     <span class="space-x-2">
       <% links = [
-        {"Labs", "#{base_url}/labs"},
+        {"Labs", "#{base_url}/labs.html"},
         {
           "GitHub <span class='-top-0.5 relative'>#{icons.external_link}</span>", 
           "https://github.com/mkhan45/SIMple-Gravity",

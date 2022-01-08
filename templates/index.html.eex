@@ -51,7 +51,7 @@
 
           <div class="mt-4 flex flex-col space-y-1">
             <%= Components.link_btn("https://mkhan45.github.io/SIMple-Gravity/", "Try It Out") %>
-            <%= Components.link_btn("#{base_url}/tutorials/gravity", "Tutorial") %>
+            <%= Components.link_btn("#{base_url}/tutorials/gravity.html", "Tutorial") %>
           </div>
         </div>
         <%# END GRAVITY CARD %>

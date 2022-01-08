@@ -11,9 +11,9 @@
       <div class="container ml-6">
         <h2 class="mt-14 text-xl font-semibold"> Categories </h2>
         <ul class="">
-          <li class="mb-1"><%= ul_link("/labs", "All") %></li>
-          <li class="mb-1"><%= ul_link("/labs/Gravity", "Gravity") %></li>
-          <li class="mb-1"><%= ul_link("/labs/Mechanics", "Mechanics") %></li>
+          <li class="mb-1"><%= ul_link("#{base_url}/labs.html", "All") %></li>
+          <li class="mb-1"><%= ul_link("#{base_url}/labs/Gravity.html", "Gravity") %></li>
+          <li class="mb-1"><%= ul_link("#{base_url}/labs/Mechanics.html", "Mechanics") %></li>
         </ul>
       </div>
       <div class="container mx-auto max-w-prose">
