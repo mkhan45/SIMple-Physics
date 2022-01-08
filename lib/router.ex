@@ -27,7 +27,7 @@ defmodule Router do
   end
 
   get "/labs" do
-    templated = render("templates/labs.html.eex", labs: Lab.get_labs())
+    templated = render("templates/labs.html.eex", labs: Lab.get_labs(), category: "All")
     send_resp(conn, 200, templated)
   end
 
@@ -40,7 +40,7 @@ defmodule Router do
 
     labs = Lab.get_labs() |> Stream.filter(is_page_category)
 
-    templated = render("templates/labs.html.eex", labs: labs)
+    templated = render("templates/labs.html.eex", labs: labs, category: category)
 
     send_resp(conn, 200, templated)
   end

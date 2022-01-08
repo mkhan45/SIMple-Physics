@@ -9,7 +9,7 @@
   <body>
     <div class="grid grid-cols-3">
       <div class="container ml-6">
-        <h2 class="mt-14 text-xl font-semibold"> Labs </h2>
+        <h2 class="mt-14 text-xl font-semibold"> Categories </h2>
         <ul class="">
           <li class="mb-1"><%= ul_link("#{base_url}/labs.html", "All") %></li>
           <li class="mb-1"><%= ul_link("#{base_url}/labs/Gravity.html", "Gravity") %></li>
