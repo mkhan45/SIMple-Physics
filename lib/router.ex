@@ -32,7 +32,15 @@ defmodule Router do
   end
 
   get "/labs/:category" do
-    templated = render("templates/labs.html.eex", labs: Lab.get_labs())
+    category = String.replace_suffix(category, ".html", "")
+    is_page_category = fn lab -> 
+      lab_categories = Lab.categories(lab)
+      Enum.member?(lab_categories, category)
+    end
+
+    labs = Lab.get_labs() |> Stream.filter(is_page_category)
+
+    templated = render("templates/labs.html.eex", labs: labs)
 
     send_resp(conn, 200, templated)
   end
