@@ -1,12 +1,21 @@
-defmodule Lab do
-  def get_labs() do
-    {:ok, lab_files} = File.ls("content/labs")
-    lab_files
-    |> Enum.map(fn n -> "content/labs/#{n}" end)
-    |> Enum.map(&File.read!/1)
-    |> Enum.map(&EarmarkParser.as_ast/1)
-    |> Enum.map(fn {:ok, ast, _} -> ast end)
+defmodule Post do
+  def read_post(file) do
+    file 
+    |> File.read!() 
+    |> EarmarkParser.as_ast() 
+    |> then(fn {:ok, ast, _} -> ast end)
   end
+
+  def get_posts_in_folder(folder) do
+    {:ok, posts} = File.ls("content/#{folder}")
+    posts
+    |> Enum.map(fn n -> "content/#{folder}/#{n}" end)
+    |> Enum.map(&read_post/1)
+  end
+
+  def get_labs(), do: get_posts_in_folder("labs")
+
+  def get_tutorials(), do: get_posts_in_folder("tutorials")
 
   def title(lab_ast) do
     {"h1", _, [title], _} = lab_ast |> Enum.at(0)

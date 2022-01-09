@@ -12,6 +12,7 @@
 
     <span class="space-x-2">
       <% links = [
+        {"Tutorials", "#{base_url}/tutorials.html"},
         {"Labs", "#{base_url}/labs.html"},
         {
           "GitHub <span class='-top-0.5 relative'>#{icons.external_link}</span>", 

@@ -47,14 +47,14 @@ defmodule Components do
     """
   end
 
-  def lab_category_list() do
+  def category_list(title \\ "Categories", path) do
     ~e"""
       <div class="mx-auto md:ml-6 md:max-w-xs">
-        <h2 class="md:mt-14 text-xl font-semibold text-center md:text-left hidden md:inline-block"> Categories </h2>
+        <h2 class="md:mt-14 text-xl font-semibold text-center md:text-left hidden md:inline-block"> #{title} </h2>
         <ul class="mx-auto flex flex-row md:flex-col gap-x-2 justify-center">
-          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs.html", "All") }</li>
-          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs/Gravity.html", "Gravity") }</li>
-          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/labs/Mechanics.html", "Mechanics") }</li>
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/#{path}.html", "All") }</li>
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/#{path}/Gravity.html", "Gravity") }</li>
+          <li class="mb-1">#{ ul_link("#{Generator.base_url()}/#{path}/Mechanics.html", "Mechanics") }</li>
         </ul>
     </div>
     """

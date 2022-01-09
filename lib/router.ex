@@ -27,37 +27,87 @@ defmodule Router do
   end
 
   get "/labs" do
-    templated = render("templates/labs.html.eex", labs: Lab.get_labs(), category: "All")
+    templated = render(
+      "templates/post_list.html.eex",
+      post_type: "Lab",
+      path: "lab",
+      posts: Post.get_labs(),
+      category: "All",
+      list_path: "labs"
+    )
     send_resp(conn, 200, templated)
   end
 
   get "/labs/:category" do
     category = String.replace_suffix(category, ".html", "")
     is_page_category = fn lab -> 
-      lab_categories = Lab.categories(lab)
+      lab_categories = Post.categories(lab)
       Enum.member?(lab_categories, category)
     end
 
-    labs = Lab.get_labs() |> Stream.filter(is_page_category)
+    labs = Post.get_labs() |> Stream.filter(is_page_category)
 
-    templated = render("templates/labs.html.eex", labs: labs, category: category)
+    templated = render(
+      "templates/post_list.html.eex",
+      post_type: "Lab",
+      posts: labs,
+      category: category,
+      path: "lab",
+      list_path: "labs"
+    )
+
+    send_resp(conn, 200, templated)
+  end
+
+  get "/lab/:lab" do
+    lab = Post.read_post("content/labs/#{lab}.md")
+    templated = render("templates/post.html.eex", post: lab, list_path: "labs")
+
+    send_resp(conn, 200, templated)
+  end
+
+  get "/tutorials" do
+    templated = render(
+      "templates/post_list.html.eex",
+      posts: Post.get_tutorials(),
+      category: "All",
+      path: "tutorial",
+      list_path: "tutorials",
+      post_type: "Tutorial"
+    )
+    send_resp(conn, 200, templated)
+  end
+
+  get "/tutorials/:category" do
+    category = String.replace_suffix(category, ".html", "")
+    is_page_category = fn lab -> 
+      lab_categories = Post.categories(lab)
+      Enum.member?(lab_categories, category)
+    end
+
+    tutorials = Post.get_tutorials() |> Stream.filter(is_page_category)
+
+    templated = render(
+      "templates/post_list.html.eex",
+      posts: tutorials,
+      category: category,
+      path: "tutorial",
+      list_path: "tutorials",
+      post_type: "Tutorial"
+    )
+
+    send_resp(conn, 200, templated)
+  end
+
+  get "tutorial/:tutorial" do
+    tutorial = Post.read_post("content/tutorials/#{tutorial}.md")
+    templated = render("templates/tutorial.html.eex", post: tutorial, post_type: "tutorials")
 
     send_resp(conn, 200, templated)
   end
 
   get "/in_progress" do
     send_resp(conn, 200, "This page is in progress")
-  end
-
-  get "/lab/:lab" do
-    lab = "content/labs/#{lab}.md"
-          |> File.read!()
-          |> EarmarkParser.as_ast()
-          |> then(fn {:ok, ast, _} -> ast end)
-
-    templated = render("templates/lab.html.eex", lab: lab)
-
-    send_resp(conn, 200, templated)
   end
 
   match _ do

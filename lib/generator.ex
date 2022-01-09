@@ -12,8 +12,8 @@ defmodule Generator do
   def gen_pages() do
     System.cmd("tailwind", ["-i", "./CSS/base.css", "-o", "./public/static/CSS/base.css"])
 
-    lab_pages = Lab.get_labs() 
-            |> Enum.map(&Lab.url/1) 
+    lab_pages = Post.get_labs() 
+            |> Enum.map(&Post.url/1) 
             |> Enum.map(fn url -> "lab/#{url}" end)
 
     for page <- Stream.concat([lab_pages, @pages]) do
