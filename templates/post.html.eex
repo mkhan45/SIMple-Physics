@@ -8,7 +8,7 @@
 
   <body>
     <div class="md:grid md:grid-cols-3">
-      <%= category_list(post_type) %>
+      <%= category_list(list_path) %>
       <div class="container mx-auto max-w-prose md:px-0 md:ml-0 px-3 mt-4 md:mt-0 md:col-span-2">
         <h1 class="text-2xl font-semibold text-center md:text-left"> <%= post |> Post.title() %> </h1>
         <h2 class="text-xs text-emerald-400 font-semibold ml-1 text-center md:text-left"> 
