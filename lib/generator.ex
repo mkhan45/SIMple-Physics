@@ -4,6 +4,9 @@ defmodule Generator do
     "labs",
     "labs/Gravity",
     "labs/Mechanics",
+    "tutorials",
+    "tutorials/Gravity",
+    "tutorials/Mechanics",
     "in_progress"
   ]
 
