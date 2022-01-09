@@ -101,7 +101,7 @@ defmodule Router do
 
   get "tutorial/:tutorial" do
     tutorial = Post.read_post("content/tutorials/#{tutorial}.md")
-    templated = render("templates/tutorial.html.eex", post: tutorial, post_type: "tutorials")
+    templated = render("templates/post.html.eex", post: tutorial, list_path: "tutorials")
 
     send_resp(conn, 200, templated)
   end
