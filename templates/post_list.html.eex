@@ -27,7 +27,7 @@
                   <%= post |> Post.categories() |> Enum.join(", ") %>
                 </h4>
                 <p> 
-                <%= post |> Post.description() %>..
+                <%= post |> Post.description() %>
                 </p>
               </div>
             </a>

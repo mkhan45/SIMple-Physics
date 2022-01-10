@@ -2,6 +2,7 @@ defmodule Post do
   def read_post(file) do
     file 
     |> File.read!() 
+    |> EEx.eval_string(base_url: Generator.base_url())
     |> EarmarkParser.as_ast() 
     |> then(fn {:ok, ast, _} -> ast end)
   end

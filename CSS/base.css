@@ -9,3 +9,21 @@
 .post-content p {
     margin-bottom: 1em;
 }
+
+.post-content a {
+    text-decoration: underline;
+    text-decoration-color: #34D399;
+    text-decoration-thickness: 2px;
+}
+
+.post-content h1 {
+    margin-top: 1em;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.post-content h2 {
+    margin-top: 0.5em;
+    font-size: 1.10em;
+    font-weight: 450;
+}

@@ -2,8 +2,12 @@ defmodule Router do
   use Plug.Router
   require Math
 
-  plug Plug.Static, at: "/static", from: "public/static"
+  plug Plug.Static, 
+    at: "/static", 
+    from: "public/static",
+    content_types: %{ "*.mp4" => "video/mp4" }
 
+  plug(HTMLPlug)
   plug(:match)
   plug(:dispatch)
 
