@@ -3,6 +3,7 @@
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link href="<%= base_url %>/static/CSS/base.css" rel="stylesheet">
+<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"fish",utcoffset:"-5"}))};sessionStorage.setItem("_swa","1");</script>
 
 <nav class="flex pt-1 pb-1 pl-4 pr-4 justify-center md:justify-between 
             flex-wrap flex-col md:flex-row md:max-w-full mx-auto text-center items-center">
