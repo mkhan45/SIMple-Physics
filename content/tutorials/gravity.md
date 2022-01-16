@@ -44,3 +44,13 @@ Using the inspect menu, you can follow the body and make the trails relative to 
         <source src="<%= base_url %>/static/video/grav-follow.webm" type="video/webm"/>
     </video>
 </div>
+
+# Creating Bodies
+
+To create bodies, use the "Create" option in the top panel:
+
+![Create](<%= base_url %>/static/img/create_menu.png)
+
+On this menu, adjust the mass and radius of the body, and then click the "Create" button at
+the bottom to enable creation mode. Once in creation mode, you can place a body by clicking and
+dragging to set its velocity. Release your mouse button to launch the body.

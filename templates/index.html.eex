@@ -16,13 +16,7 @@
         <%# MECHANICS CARD %>
         <div class="text-center">
           <span class="text-xl">Mechanics</span>
-          <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 50">
-            <%= for y <- 0..-4 do %>
-              <%= for x <- -(-4-y)..(-4-y) do %>
-                <rect x="<%= 9 * x %>" y="<%= 9 * y %>" width="8" height="8"/>
-              <% end %>
-            <% end %>
-          </svg>
+          <%= sim_icon(:mechanics) %>
 
           <div class="mt-4 flex flex-col space-y-1 justify-items-center">
             <%= Components.link_btn("#{base_url}/in_progress.html", "Try It Out") %>
@@ -35,25 +29,10 @@
         <%# GRAVITY CARD %>
         <div class="text-center">
           <span class="text-xl">Gravity</span>
-          <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 60">
-            <circle r="7.5%" stroke="black"/>
-            <circle cx="40%" r="2%"/>
-            <%# Not sure why up to 15 is needed %>
-            <%= for i <- 1..15 do %>
-              <% start_x = Math.cos((i - 1) / 10) * 40 %>
-              <% start_y = Math.sin((i - 1) / 10) * -40 %>
-              <% end_x = Math.cos(i / 10) * 40 %>
-              <% end_y = Math.sin(i / 10) * -40 %>
-              <% width = (15 - i) / 15 * 0.75 + 0.15 %>
-              <path 
-                 d="M<%=start_x%>,<%=start_y%> A40,40 0 0 1 <%=end_x%>,<%=end_y%>" 
-                 stroke-width="<%= width %>%" stroke="black" fill="none"
-              />
-            <% end %>
-          </svg>
+          <%= sim_icon(:gravity) %>
 
           <div class="mt-4 flex flex-col space-y-1">
-            <%= Components.link_btn("https://mkhan45.github.io/SIMple-Gravity/", "Try It Out") %>
+            <%= Components.link_btn("https://gravity.simple-physics.org", "Try It Out") %>
             <%= Components.link_btn("#{base_url}/in_progress.html", "Tutorial") %>
             <%= Components.link_btn("#{base_url}/labs/Gravity.html", "Labs") %>
           </div>
@@ -94,7 +73,7 @@
 
       <div class="container max-w-prose mx-auto">
         <h2 class="text-center text-3xl text-emerald-400 font-semibold mb-2">
-          What is SIMple Physics? 
+          Why SIMple Physics? 
         </h2>
 
         <p>

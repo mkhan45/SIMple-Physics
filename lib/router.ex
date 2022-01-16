@@ -110,6 +110,11 @@ defmodule Router do
     send_resp(conn, 200, templated)
   end
 
+  get "simulators" do
+    templated = render("templates/simulators.html.eex")
+    send_resp(conn, 200, templated)
+  end
+
   get "/in_progress" do
     send_resp(conn, 200, "This page is in progress")
   end

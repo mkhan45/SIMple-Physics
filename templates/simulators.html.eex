@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<% import Components %>
+<html lang="en">
+  <head>
+    <%= render.("templates/head.html.eex") %>
+    <title>SIMple Physics</title>
+  </head>
+
+  <body>
+    <div class="container mx-auto max-w-screen-lg">
+      <h1 class="text-center text-4xl mt-12 mb-12 font-semibold"> Simulators </h1>
+      <div class="flex flex-row flex-wrap justify-evenly gap-x-0.5">
+        <%= simulator_card("Mechanics", "#{base_url}/in_progress.html", :mechanics,
+          ~e"""
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua.
+          """
+        ) %>
+        <%= simulator_card("Gravity", "https://gravity.simple-physics.org", :gravity, 
+          ~e"""
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua.
+          """
+        ) %>
+      </div>
+    </div>
+
+    <%# <script src="js/scripts.js"></script> %>
+  </body>
+</html>
