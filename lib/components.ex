@@ -63,21 +63,25 @@ defmodule Components do
   def simulator_card(name, url, icon, description) do
       ~e"""
         <a href="#{url}" class="px-3 max-w-xs">
-          <h3 class="text-lg font-semibold text-center"> #{name} </h3>
-          #{sim_icon(icon)}
-          <hr class="border-emerald-400 border-2 mt-3"/>
+          <h3 class="text-lg font-semibold text-center underline decoration-emerald-400 decoration-2"> #{name} </h3>
+          <div class="mb-1"> #{sim_icon(icon)} </div>
+          <hr class="border-emerald-400 border-2 mx-auto mb-1"/>
           <p> #{description} </p>
-          <hr class="border-emerald-400 border-2 mt-3"/>
         </a>
       """
   end
 
-  def sim_icon(:mechanics) do
+  def sim_icon(sim, accent \\ "#000000")
+
+  def sim_icon(:mechanics, accent) do
       ~e"""
       <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 50">
         <%= for y <- 0..-4 do %>
           <%= for x <- -(-4-y)..(-4-y) do %>
-            <rect x="<%= 9 * x %>" y="<%= 9 * y %>" width="8" height="8"/>
+            <% color = if x == -3 || x == 3 || y == -4, do: "#{accent}", else: "#000000" %>
+            <%= color %>
+            <rect x="<%= 9 * x %>" y="<%= 9 * y %>" width="8" height="8" 
+                  stroke="none" fill="<%= color %>"/>
           <% end %>
         <% end %>
       </svg>
@@ -85,11 +89,10 @@ defmodule Components do
       |> EEx.eval_string()
   end
 
-  def sim_icon(:gravity) do
+  def sim_icon(:gravity, accent) do
       ~e"""
       <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 60">
         <circle r="7.5%" stroke="black"/>
-        <circle cx="40%" r="2%"/>
         <%# Not sure why up to 15 is needed %>
         <%= for i <- 1..15 do %>
           <% start_x = Math.cos((i - 1) / 10) * 40 %>
@@ -99,8 +102,9 @@ defmodule Components do
           <% width = (15 - i) / 15 * 0.75 + 0.15 %>
           <path 
              d="M<%=start_x%>,<%=start_y%> A40,40 0 0 1 <%=end_x%>,<%=end_y%>" 
-             stroke-width="<%= width %>%" stroke="black" fill="none"
+             stroke-width="<%= width %>%" stroke="#{accent}" fill="none"
           />
+          <circle cx="40%" r="2%" stroke="#000" fill="#000"/>
         <% end %>
       </svg>
       """
