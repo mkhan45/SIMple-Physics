@@ -26,6 +26,7 @@ site-*.tar
 /tmp/
 
 /public
+!/public/static/*
 /static/CSS
 package-lock.json
 package.json
