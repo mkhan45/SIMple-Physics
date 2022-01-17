@@ -110,4 +110,14 @@ defmodule Components do
       """
       |> EEx.eval_string()
   end
+
+  def post_video(url) do
+    ~e"""
+    <div>
+        <video controls loop>
+            <source src="#{Generator.base_url}/static/video/#{url}" type="video/webm"/>
+        </video>
+    </div>
+    """
+  end
 end

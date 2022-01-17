@@ -19,12 +19,7 @@ You can pan and zoom the camera using the middle mouse button. To pan,
 hold the middle mouse button and move your mouse. To zoom around your
 mouse cursor, use the scroll wheel.
 
-<div>
-    <video controls loop>
-        <source src="<%= base_url %>/static/video/grav-camera.webm" type="video/webm"/>
-        <source src="<%= base_url %>/static/video/grav-camera.mp4" type="video/mp4"/>
-    </video>
-</div>
+<%= Components.post_video("grav-camera.webm") %>
 
 # Inspect
 
@@ -39,11 +34,7 @@ To remove the side panel, click in empty space or press Escape.
 
 Using the inspect menu, you can follow the body and make the trails relative to the inspected body:
 
-<div>
-    <video controls loop>
-        <source src="<%= base_url %>/static/video/grav-follow.webm" type="video/webm"/>
-    </video>
-</div>
+<%= Components.post_video("grav-follow.webm") %>
 
 # Creating Bodies
 
@@ -54,3 +45,5 @@ To create bodies, use the "Create" option in the top panel:
 On this menu, adjust the mass and radius of the body, and then click the "Create" button at
 the bottom to enable creation mode. Once in creation mode, you can place a body by clicking and
 dragging to set its velocity. Release your mouse button to launch the body.
+
+<%= Components.post_video("grav-create.webm") %>
