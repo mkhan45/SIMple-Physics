@@ -25,8 +25,7 @@ site-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
-/public
-!/public/static/*
+/public/**/*.html
 /static/CSS
 package-lock.json
 package.json
