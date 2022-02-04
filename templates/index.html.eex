@@ -70,16 +70,6 @@
       </div>
 
       <hr class="mt-6 mb-6 mx-auto"/>
-
-      <div class="container max-w-prose mx-auto">
-        <h2 class="text-center text-3xl text-emerald-400 font-semibold mb-2">
-          Why SIMple Physics? 
-        </h2>
-
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        </p>
-      </div>
     </div>
 
     <%# <script src="js/scripts.js"></script> %>
