@@ -36,7 +36,7 @@ defmodule Post do
   end
 
   def description(lab_ast) do
-    {"p", _, [description], _} = lab_ast |> Enum.at(3)
+    {_, _, [description], _} = lab_ast |> Enum.at(3)
     description
   end
 
