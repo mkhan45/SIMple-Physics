@@ -116,6 +116,15 @@ add_body(#{
 Hint: Place the planet far to the right of the star, and set its velocity to be straight up or down.
 Keep adjusting the velocity's y-component until it falls around the star.
 
+To get the ID of an existing body, you can inspect it by left clicking. Then, click on the ID label
+to copy its ID. Finally, you can convert it to an engine ID type with the `id` function.
+
+For example:
+```
+let body = id(4294967297); // find the number by inspecting a body
+body.add_force(vec(30.0, 20.0));
+```
+
 ### Update
 
 The final important component of the scripting system is the `update` function. It accepts
@@ -123,11 +132,13 @@ a list of body ids and a list of bodies, and is run once a frame.
 
 Try the following script:
 ```
-let frame = 0
+let frame = 0;
 let update = |ids, bodies| {
     frame = frame + 1;
     print(frame);
 };
 ```
 
-TODO
+Your output should fill with increasing numbers, letting you know how many frames since it started.
+
+There will be more examples of the update function in action in the scripting documentation.
