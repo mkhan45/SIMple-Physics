@@ -6,7 +6,7 @@ gravity
 
 Intro tutorial for SIMple Gravity
 
-Follow along with this tutorial using [the web app](https://gravity.simple-physics.com).
+Follow along with this tutorial using [the web app](https://gravity.simple-physics.org).
 
 SIMple Gravity is the simulator for the universal gravitation unit of physics. When you load
 the app, it should contain a basic two-body system including a star and a planet:
