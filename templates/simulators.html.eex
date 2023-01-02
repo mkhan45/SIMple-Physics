@@ -6,7 +6,7 @@
     <title>SIMple Physics</title>
   </head>
 
-  <body>
+  <body class="relative min-h-screen">
     <div class="container mx-auto max-w-screen-lg">
       <h1 class="text-center text-4xl mt-12 mb-12 font-semibold"> Simulators </h1>
       <div class="flex flex-row flex-wrap justify-evenly gap-x-0.5">
@@ -27,4 +27,7 @@
 
     <%# <script src="js/scripts.js"></script> %>
   </body>
+  <footer class="absolute text-center text-xs bottom-2.5 w-full">
+    Copyright © <%= Date.utc_today().year %>
+  </footer>
 </html>

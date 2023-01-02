@@ -6,10 +6,10 @@
     <title>SIMple Physics</title>
   </head>
 
-  <body>
+  <body class="relative min-h-screen">
     <h1 class="text-center text-6xl mt-16 mb-16 text-emerald-400 font-semibold"> SIMple Physics </h1>
 
-    <div class="container mx-auto max-w-screen-md">
+    <div class="container mx-auto max-w-screen-md grow">
       <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 space-y-4 md:space-y-0 
                    justify-center justify-items-center max-w-prose mx-auto">
 
@@ -74,4 +74,7 @@
 
     <%# <script src="js/scripts.js"></script> %>
   </body>
+  <footer class="absolute text-center text-xs bottom-2.5 w-full">
+    Copyright © <%= Date.utc_today().year %>
+  </footer>
 </html>

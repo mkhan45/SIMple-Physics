@@ -6,7 +6,7 @@
     <title>SIMple Physics</title>
   </head>
 
-  <body>
+  <body class="relative min-h-screen">
     <div class="md:grid md:grid-rows-1 md:grid-cols-12">
       <%= category_list(list_path) %>
       <div class="container mx-auto max-w-prose md:col-span-11 px-3">
@@ -36,4 +36,7 @@
       </div>
     </div>
   </body>
+  <footer class="absolute text-center text-xs bottom-2.5 w-full">
+    Copyright © <%= Date.utc_today().year %>
+  </footer>
 </html>
