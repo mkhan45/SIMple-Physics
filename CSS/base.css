@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+pre {
+    background-color: #e3e9e3;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-color: rgb(52 211 153);
+    border-style: solid;
+    border-width: 2.5px;
+}
+
 .link-svg {
     display: inline-block !important;
 }
