@@ -51,6 +51,12 @@ dragging to set its velocity. Release your mouse button to launch the body.
 
 <%= Components.post_video("grav-create.webm") %>
 
+# Reset
+
+If the engine ever crashes or you've moved your camera away from anything interesting,
+reload the page to reset the engine. However, this will reset your script and everything
+else, so make sure to save it first.
+
 # Scripting
 
 Click the scripting button on the top panel to open the code editor.
