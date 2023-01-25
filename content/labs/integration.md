@@ -1,6 +1,6 @@
 # Position Update and Integration
 
-integration
+integration-pos
 
 ["Gravity"]
 
@@ -64,6 +64,10 @@ code forever. This is how the `update` function is run by the engine every frame
 
 ## Iterating over Bodies
 
+First, create some bodies by clicking the 'Create' button in the top left
+or by pressing your 'c' key, then clicking and dragging. You'll want a few
+bodies with close to zero velocity for the next step.
+
 The basic update function looks like this:
 ```
 let update = |ids, bodies| {
@@ -72,7 +76,10 @@ let update = |ids, bodies| {
 
 You may have noticed the `ids` and `bodies` parameters. In this class,
 we'll primarily use `ids`, which contains the ID of every body in the
-simulation. As with the last lab, we can use these IDs to interact with
+simulation. The engine grabs the ID of every body in the simulation
+and calls this function on them each frame.
+
+As with the last lab, we can use these IDs to interact with
 the bodies through the scripting engine.
 
 For example, what does this code do?
@@ -100,8 +107,10 @@ update yourself in the scripting engine.
 
 In class, you learned that:
 ```
-x_f = x_0 + v_0
+x_f = x_0 + v_0 * dt
 ```
+
+You can get the dt of the engine using the function `DT()`.
 
 Using this equation, fill in the following script to implement the position update
 function:
@@ -113,6 +122,7 @@ let update = |ids, bodies| {
     for id in ids {
         let x_0 = id.get_pos();
         let v_0 = id.get_vel();
+        let dt = DT();
 
         let x_f = ???;
 
