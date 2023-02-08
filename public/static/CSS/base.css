@@ -823,6 +823,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 pre {
+  width: 115%;
+  margin-left: -7.5%;
   background-color: #e3e9e3;
   padding: 1em;
   margin-bottom: 1em;
