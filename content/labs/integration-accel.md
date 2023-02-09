@@ -82,6 +82,7 @@ let update = |ids, bodies| {
 
         id.set_pos(x_f);
         id.set_vel(v_f);
+        id.set_accel(vec(0.0, 0.0));
     }
 };
 
