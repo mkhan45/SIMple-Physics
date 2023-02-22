@@ -19,9 +19,27 @@ fn apply_spring_forces(ids) {
     let damping_factor = 0.999;
 
     for body in ids {
+        draw_spring(vec(0.0, body.get_pos().y), body.get_pos(), body.get_radius() * 2.0, body.get_radius() / 2.0, 10);
         let spring_length = (body.get_pos().x + body.get_vel().x);
         body.add_force(vec(spring_factor * -spring_length, 0.0));
         body.set_vel(body.get_vel() * damping_factor);
+    }
+}
+
+fn draw_spring(start, end, width, thickness, coils) {
+    let r = end - start;
+    let incr = r / coils;
+    let offs = incr.rotate(3.1415 / 2.0).normalized * width;
+
+    let pos = start;
+    for i in 0..coils {
+        let p1 = pos + (incr / 3.0) + (offs / 2.0);
+        let p2 = pos + (incr * 2.0/3.0) - (offs / 2.0);
+        let p3 = pos + incr;
+        draw_line(pos, p1, thickness);
+        draw_line(p1, p2, thickness);
+        draw_line(p2, p3, thickness);
+        pos = p3;
     }
 }
 ```

@@ -56,3 +56,8 @@ ul {
     margin-left: 1.5em;
     margin-bottom: 1em;
 }
+
+.post-content ol {
+    list-style: decimal;
+    margin-left: 1.5em;
+}
