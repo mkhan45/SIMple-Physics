@@ -4,12 +4,11 @@ gravity
 
 ["Gravity"]
 
+Note: all the simulators are combined into one now, so SIMple Gravity will be used for all mechanics.
+
 Intro tutorial for SIMple Gravity
 
 Follow along with this tutorial using [the web app](https://gravity.simple-physics.org).
-
-SIMple Gravity is the simulator for the universal gravitation unit of physics. When you load
-the app, it should contain a basic two-body system including a star and a planet:
 
 ![SIMple Gravity Interface](<%= base_url %>/static/img/grav_interface.png)
 
