@@ -7,7 +7,7 @@ defmodule Generator do
     "tutorials",
     "tutorials/Gravity",
     "tutorials/Mechanics",
-    "simulators",
+    # "simulators",
     "in_progress"
   ]
 

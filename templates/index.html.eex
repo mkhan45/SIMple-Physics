@@ -7,34 +7,20 @@
   </head>
 
   <body class="relative min-h-screen">
-    <h1 class="text-center text-6xl mt-16 mb-16 text-emerald-400 font-semibold"> SIMple Physics </h1>
+    <h1 class="text-center text-6xl mt-16 mb-12 text-emerald-400 font-semibold"> SIMple Physics </h1>
 
     <div class="container mx-auto max-w-screen-md grow">
-      <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 space-y-4 md:space-y-0 
+      <div class="grid grid-rows-1 sm:grid-cols-1 space-y-6 md:space-y-0 
                    justify-center justify-items-center max-w-prose mx-auto">
-
-        <%# MECHANICS CARD %>
-        <div class="text-center">
-          <span class="text-xl">Mechanics</span>
-          <%= sim_icon(:mechanics) %>
-
-          <div class="mt-4 flex flex-col space-y-1 justify-items-center">
-            <%= Components.link_btn("#{base_url}/in_progress.html", "Try It Out") %>
-            <%= Components.link_btn("#{base_url}/in_progress.html", "Tutorial") %>
-            <%= Components.link_btn("#{base_url}/labs/Mechanics.html", "Labs") %>
-          </div>
-        </div>
-        <%# END MECHANICS CARD %>
 
         <%# GRAVITY CARD %>
         <div class="text-center">
-          <span class="text-xl">Gravity</span>
           <%= sim_icon(:gravity) %>
 
-          <div class="mt-4 flex flex-col space-y-1">
+          <div class="mt-6 flex flex-col space-y-2">
             <%= Components.link_btn("https://gravity.simple-physics.org", "Try It Out") %>
-            <%= Components.link_btn("#{base_url}/in_progress.html", "Tutorial") %>
-            <%= Components.link_btn("#{base_url}/labs/Gravity.html", "Labs") %>
+            <%= Components.link_btn("#{base_url}/tutorial/gravity.html", "Tutorial") %>
+            <%= Components.link_btn("#{base_url}/labs.html", "Labs") %>
           </div>
         </div>
         <%# END GRAVITY CARD %>
@@ -49,21 +35,21 @@
         <%= Components.desc_card(
           "Run Interactive Simulations",
           ~e"""
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Explore physics concepts through interactive simulations that help you visualize and better understand the principles at play.
           """
         )
         %>
         <%= Components.desc_card(
           "Learn from Custom Labs",
           ~e"""
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Follow step-by-step custom labs, designed to guide you through physics experiments and deepen your understanding of the subject.
           """
         )
         %>
         <%= Components.desc_card(
           "Code Your Own Physics",
           ~e"""
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Learn how to code to create your own simulations, allowing you to explore custom scenarios and test your ideas.
           """
         )
         %>
