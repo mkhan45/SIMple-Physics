@@ -91,7 +91,7 @@ defmodule Components do
 
   def sim_icon(:gravity, accent) do
       ~e"""
-      <svg class="mx-auto" width=10em height=5em viewBox="-50 -50 100 60">
+      <svg class="mx-auto mb-12" width=12.5em height=7.5em viewBox="-50 -50 100 60">
         <circle r="7.5%" stroke="black"/>
         <%# Not sure why up to 15 is needed %>
         <%= for i <- 1..15 do %>
