@@ -1,6 +1,6 @@
-# Velocity Update and Integration
+# Momentum Update - Constant Force
 
-integration-vel
+2-integration-accel
 
 ["Gravity"]
 

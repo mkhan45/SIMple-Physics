@@ -584,10 +584,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.mb-14 {
-  margin-bottom: 3.5rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -955,6 +951,13 @@ ul {
 .post-content ol {
   list-style: decimal;
   margin-left: 1.5em;
+}
+
+.post-content .inline {
+  /* inline code */
+  background-color: #e3e9e3;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
 }
 
 .hover\:scale-110:hover {

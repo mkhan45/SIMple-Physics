@@ -1,6 +1,6 @@
-# Position Update and Integration
+# Position Update
 
-integration-pos
+0-integration-pos
 
 ["Gravity"]
 
@@ -30,7 +30,7 @@ However, most programming languages have loops, which
 allow us to repeat code many times.
 
 The main type of loop we'll use in this class is the
-for-each loop, which runs code for every element (a.k.a item) 
+`for-each` loop, which runs code for every element (a.k.a item) 
 in a list. This is usually called "iterating" over a list.
 
 For example, to print the numbers from 1 to 5, we could instead
@@ -56,10 +56,10 @@ for i in 1..100 {
 print(total);
 ```
 
-For-each loops are a very common kind of loop. However, two other common
-kinds are for loops and while loops.
+`For-each` loops are a very common kind of loop. However, two other common
+kinds are `for` loops and `while` loops.
 
-While loops are important because they can be used to keep executing some
+`while` loops are important because they can be used to keep executing some
 code forever. This is how the `update` function is run by the engine every frame.
 
 ## Iterating over Bodies
