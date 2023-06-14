@@ -34,6 +34,10 @@ const DRAG_COEFFICIENT = 5 * 0.1**9;
 
 let update = |ids, bodies| {
     for body in ids {
+        if (is_paused()) {
+            return;
+        }
+
         let v = body.get_vel();
         let s = v.length;
         if (s < 1.0) {
