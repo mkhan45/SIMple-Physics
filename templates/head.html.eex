@@ -13,6 +13,7 @@
 
     <span class="space-x-2">
       <% links = [
+        {"Simulator", "https://gravity.simple-physics.org"},
         {"Tutorials", "#{base_url}/tutorials.html"},
         {"Labs", "#{base_url}/labs.html"},
         {
