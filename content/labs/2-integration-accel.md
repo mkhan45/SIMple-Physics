@@ -93,8 +93,8 @@ the simulation's time does not match up with the real world.
 
 Click the body in the simulation. Does its velocity and position match what you calculated?
 
-The velocity should match up exactly, but it is expected that the position will be a little
-different than calculated. This is because of computational integration error; we are essentially
+The velocity should match up exactly, but the position will be different. 
+This is because of computational integration error; we are essentially
 taking a Riemann sum with non-zero width rectangles. Numerical integration is an advanced
 topic that won't be covered in this class. If you're interested, read about it 
 [on Wikipedia](https://en.wikipedia.org/wiki/Numerical_integration).
