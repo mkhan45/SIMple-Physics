@@ -78,6 +78,8 @@ After implementing the elastic collisions script, test your implementation with 
 
 1. Create two objects with different masses and observe how their final velocities are affected by the mass ratio. How does the mass ratio impact the energy transfer during the collision?
 
-2. Experiment with varying values of elasticity. How does the elasticity affect the behavior of the collisions and the conservation of kinetic energy in the system?
+2. You had to update the v1f and v2f lines of code. What do you think each line of that section does? Can you explain what these conditions mean physically?
 
-3. Bonus: What happens when multiple objects collide at the exact same time? Why does this happen? The solution is to use a constraint solver, which is far outside the scope of this class.
+3. Experiment with varying values of elasticity. How does the elasticity affect the behavior of the collisions and the conservation of kinetic energy in the system?
+
+4. Bonus: What happens when multiple objects collide at the exact same time? Why does this happen? The solution is to use a constraint solver, which is far outside the scope of this class.
