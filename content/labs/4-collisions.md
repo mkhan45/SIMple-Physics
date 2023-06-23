@@ -23,45 +23,56 @@ First, we'll need to disable the engine's built-in collision system by adding th
 set_collisions(false);
 ```
 
-Now, we'll implement the update function that checks for collisions between objects and calculates their new velocities based on the elastic collision equations:
+Now, we'll implement the update function that checks for collisions between objects and calculates their new velocities based on the elastic collision equations. To do this, we'll use the `pairs` helper function, which finds every combination of two bodies in the list.
 
 ```rhai
 let ELASTICITY = 1.0;
 
 let update = |ids, bodies| {
-    for i in 0..(ids.length - 1) {
-        for j in (i+1)..ids.length {
-            let a = ids[i];
-            let b = ids[j];
-            
-            let m1 = a.get_mass();
-            let m2 = b.get_mass();
-            let mt = m1 + m2;
+    for pair in pairs(ids) {
+        let a = pair[0];
+        let b = pair[1];
+        
+        let m1 = a.get_mass();
+        let m2 = b.get_mass();
+        let mt = m1 + m2;
 
-            let v1 = a.get_vel();
-            let v2 = b.get_vel();
+        let v1 = a.get_vel();
+        let v2 = b.get_vel();
 
-            let r1 = a.get_radius();
-            let r2 = b.get_radius();
-            let r = b.get_pos() - a.get_pos();
-            // the radius after the next timestep
-            let nr = (b.get_pos() + v2) - (a.get_pos() + v1);
+        let r1 = a.get_radius();
+        let r2 = b.get_radius();
+        let r = b.get_pos() - a.get_pos();
+        // the radius after the next timestep
+        let next_r = (b.get_pos() + v2) - (a.get_pos() + v1);
 
-            if ??? {
-                let v1f = ???;
-                let v2f = ???;
+        let touching = ???;
+        let closer = ???;
+        if ??? {
+            let v1f = ???;
+            let v2f = ???;
 
-                a.set_vel(v1f);
-                b.set_vel(v2f);
-            }
+            a.set_vel(v1f);
+            b.set_vel(v2f);
         }
     }
 };
+
+fn pairs(ls) {
+    let ret = [];
+    for i in 0..(ls.length - 1) {
+        for j in (i+1)..ls.length {
+            ret.push([ls[i], ls[j]]);
+        }
+    }
+
+    return ret;
+}
 ```
 
 To complete the implementation, you'll need to fill in the missing parts of the script:
 
-1. Determine the condition for a collision to occur. The bodies should be touching and actually moving towards each other.
+1. Determine the condition for a collision to occur. The bodies should be touching and actually moving towards each other. Hint: when two bodies are approaching each other, how will `next_r` relate to `r`?
 
 2. Calculate the final velocities (`v1f` and `v2f`) using the elastic collision equations.
 
@@ -69,12 +80,8 @@ To complete the implementation, you'll need to fill in the missing parts of the 
 
 After implementing the elastic collisions script, test your implementation with the following exercises:
 
-1. Create two objects of equal mass and different initial velocities. Observe how their velocities change after the collision. Do the objects exchange their velocities?
+1. Create two objects with different masses and observe how their final velocities are affected by the mass ratio. How does the mass ratio impact the energy transfer during the collision?
 
-2. Create two objects with different masses and observe how their final velocities are affected by the mass ratio. How does the mass ratio impact the energy transfer during the collision?
+2. Experiment with varying values of elasticity. How does the elasticity affect the behavior of the collisions and the conservation of kinetic energy in the system?
 
-3. Set up a series of objects in a row with equal spacing, like a Newton's Cradle. Give the first object an initial velocity towards the row. Observe the behavior of the objects as they collide. How does the conservation of kinetic energy play a role in the chain reaction?
-
-4. Experiment with varying values of elasticity. How does the elasticity affect the behavior of the collisions and the conservation of kinetic energy in the system?
-
-5. Bonus: What happens when multiple objects collide at the exact same time? Why does this happen? The solution is to use a constraint solver, which is far outside the scope of this class.
+3. Bonus: What happens when multiple objects collide at the exact same time? Why does this happen? The solution is to use a constraint solver, which is far outside the scope of this class.
