@@ -46,9 +46,9 @@ let update = |ids, bodies| {
         // the radius after the next timestep
         let next_r = (b.get_pos() + v2) - (a.get_pos() + v1);
 
-        let touching = ???;
-        let closer = ???;
-        if ??? {
+        let touching = r.length <= r1 + r2;
+        let closer = next_r.length < r.length;
+        if touching && closer {
             let v1f = ???;
             let v2f = ???;
 
@@ -70,11 +70,7 @@ fn pairs(ls) {
 }
 ```
 
-To complete the implementation, you'll need to fill in the missing parts of the script:
-
-1. Determine the condition for a collision to occur. The bodies should be touching and actually moving towards each other. Hint: when two bodies are approaching each other, how will `next_r` relate to `r`?
-
-2. Calculate the final velocities (`v1f` and `v2f`) using the elastic collision equations.
+To complete the implementation, you'll need to fill in the missing parts of the script by calculating the final velocities (`v1f` and `v2f`) using the elastic collision equations.
 
 ## Exercises
 

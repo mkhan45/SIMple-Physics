@@ -14,10 +14,10 @@ spring force to every object towards the center of the screen
 using this function:
 
 ```
-fn apply_spring_forces(ids) {
-    let spring_factor = 0.001;
-    let damping_factor = 1.0 - 0.1**5;
+const SPRING_CONSTANT = 0.001;
+const DAMPING_FACTOR = 0.999;
 
+fn apply_spring_forces(ids) {
     for body in ids {
         draw_spring(
             vec(0.0, body.get_pos().y),
@@ -27,15 +27,15 @@ fn apply_spring_forces(ids) {
             10
         );
         let spring_length = (body.get_pos().x + body.get_vel().x);
-        body.add_force(vec(spring_factor * -spring_length, 0.0));
-        body.set_vel(body.get_vel() * damping_factor);
+        body.add_force(vec(SPRING_CONSTANT * -spring_length, 0.0));
+        body.set_vel(body.get_vel() * DAMPING_FACTOR);
     }
 }
 ```
 
 Try to understand this function. The important line is this:
 ```
-body.add_force(vec(spring_factor * -spring_length, 0.0));
+body.add_force(vec(SPRING_CONSTANT * -spring_length, 0.0));
 ```
 
 The `damping_factor` simulates energy lost by the spring. It is common
@@ -102,7 +102,7 @@ let update = |ids, bodies| {
         let v = body.get_vel();
         let v_mag = v.length;
 
-        // use the SPRING_FACTOR variable for 
+        // use the SPRING_CONSTANT variable for 
         // potential energy
         let body_kinetic_energy = ???;
         let body_potential_energy = ???;
