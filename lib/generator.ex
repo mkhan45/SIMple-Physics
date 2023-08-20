@@ -1,6 +1,7 @@
 defmodule Generator do
   @pages [
     "",
+    "about",
     "labs",
     "labs/Gravity",
     "labs/Mechanics",

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<% import Components %>
+<html lang="en">
+  <head>
+    <%= render.("templates/head.html.eex") %>
+    <title>SIMple Physics</title>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div class="md:grid md:grid-rows-1 md:grid-cols-12">
+    </div>
+  </body>
+  <footer class="absolute text-center text-xs bottom-2.5 w-full">
+    Copyright © <%= Date.utc_today().year %>
+  </footer>
+</html>

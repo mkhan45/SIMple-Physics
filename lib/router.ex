@@ -30,6 +30,11 @@ defmodule Router do
     send_resp(conn, 200, templated)
   end
 
+  get "/about" do
+    templated = render("templates/about.html.eex")
+    send_resp(conn, 200, templated)
+  end
+
   get "/labs" do
     templated = render(
       "templates/post_list.html.eex",
