@@ -6,11 +6,36 @@
     <title>SIMple Physics</title>
   </head>
 
-  <body class="relative min-h-screen">
-    <div class="md:grid md:grid-rows-1 md:grid-cols-12">
+  <body>
+    <div class="relative min-h-screen">
+      <div class="container mx-auto mt-8 max-w-prose mb-8">
+        <h1 class="text-2xl font-semibold text-left"> About </h1>
+        (in progress)
+        <hr class="mt-1 mb-3 "/>
+        <div class="post-content">
+          <p>SIMple Physics is an interactive, scriptable physics engine made to help teach physics.</p>
+          <br>
+          <section>
+            <h3> Overview </h3>
+            <p>
+            The core of SIMple Physics is the 2D scene UI. Through this UI, you can inspect and interact
+            with physics objects, viewing properties such as position, mass, and velocity. SIMple Physics
+            comes with a very minimal physics engine built in; the real power comes from the scripting
+            engine. Through the scripting engine, users can disable the built-in physics engine and write
+            custom physics code. This allows two main lab types:
+            <ul class="-mt-2">
+              <li> Labs where the student implements a physics concept from scratch, and then experiment with it </li>
+              <li> Labs where the instructor creates a scene, and the students experiment on it </li>
+            </ul>
+            </p>
+            For more info, see the <a href=<%="#{base_url}/tutorial/gravity.html"%>>tutorial</a>, or take a look
+            at <a href=<%="#{base_url}/lab/5-spring.html"%>>a lab</a>.
+          </section>
+        </div>
+      </div>
+      <footer class="absolute text-center text-xs bottom-2.5 w-full">
+        Copyright © <%= Date.utc_today().year %>
+      </footer>
     </div>
   </body>
-  <footer class="absolute text-center text-xs bottom-2.5 w-full">
-    Copyright © <%= Date.utc_today().year %>
-  </footer>
 </html>

@@ -56,7 +56,7 @@ defmodule Components do
           <li class="mb-1">#{ ul_link("#{Generator.base_url()}/#{path}/Gravity.html", "Gravity") }</li>
           <li class="mb-1">#{ ul_link("#{Generator.base_url()}/#{path}/Mechanics.html", "Mechanics") }</li>
         </ul>
-    </div>
+      </div>
     """
   end
 
