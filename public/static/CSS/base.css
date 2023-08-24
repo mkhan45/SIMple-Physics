@@ -576,6 +576,10 @@ video {
   margin-right: auto;
 }
 
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -628,12 +632,12 @@ video {
   margin-top: 2rem;
 }
 
-.-mt-1 {
-  margin-top: -0.25rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
-.-mt-2 {
-  margin-top: -0.5rem;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .flex {
@@ -650,6 +654,14 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .min-h-screen {

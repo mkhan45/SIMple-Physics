@@ -12,7 +12,7 @@
         <h1 class="text-2xl font-semibold text-left"> About </h1>
         (in progress)
         <hr class="mt-1 mb-3 "/>
-        <div class="post-content">
+        <div class="post-content mb-8">
           <p>SIMple Physics is an interactive, scriptable physics engine made to help teach physics.</p>
           <br>
           <section>
@@ -24,13 +24,50 @@
             engine. Through the scripting engine, users can disable the built-in physics engine and write
             custom physics code. This allows two main lab types:
             <ul class="-mt-2">
-              <li> Labs where the student implements a physics concept from scratch, and then experiment with it </li>
               <li> Labs where the instructor creates a scene, and the students experiment on it </li>
+              <li> Labs where the student implements a physics concept from scratch, and then experiment with it </li>
             </ul>
             </p>
             For more info, see the <a href=<%="#{base_url}/tutorial/gravity.html"%>>tutorial</a>, or take a look
             at <a href=<%="#{base_url}/lab/5-spring.html"%>>a lab</a>.
           </section>
+          <br>
+          <section>
+            <h3> Example Labs </h3>
+            Before diving deeper into the details of SIMple Physics, let's look at some lab ideas:
+
+            <h4 class="mt-2"> <b> Orbital Velocity </b> </h4>
+            <p>
+            The default scene of SIMple Physics is a planet orbiting a star -- universal gravitation is one
+            of the built-in physics concepts. A very simple lab would be to have students calculate the necessary
+            velocity for a planet to go into circular orbit around the star, given all masses and the radius.
+            Then, they can test their answer by creating a planet with the correct velocity and seeing if it
+            goes into orbit.
+            </p>
+            <p>
+            An alternative version of this lab would be for students to interactively create elliptical orbits ad-hoc. 
+            Then, they can inspect the planet's velocity and position at a certain instant to see the relation between
+            the planet's radius and speed.
+            </p>
+
+            <h4 class="mt-2"> <b> Elastic Collisions </b> </h4>
+            <p>
+            By default, SIMple Physics has inelastic collisions. In a lab used this past summer, students were tasked
+            with implementing elastic collisions through the scripting engine. The magic comes from the engine
+            retaining its interactivity with custom physics; after successfully implementing elastic collisions,
+            students could interactively collide objects and see the results.
+            </p>
+            <p>
+            The lab handout for this lab can be found <a href=<%="#{base_url}/lab/4-collisions.html"%>>here</a>.
+            The class in which it was used was meant to expose students to programming without emphasizing it, so
+            the handout gives most of the code and has students fill in the blanks.
+            </p>
+          </section>
+          <section>
+            <h3> Details </h3>
+            In progress
+          </section>
+          <hr class="mt-1 h-12 "/>
         </div>
       </div>
       <footer class="absolute text-center text-xs bottom-2.5 w-full">
