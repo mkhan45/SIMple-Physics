@@ -45,6 +45,8 @@ will guide you to fix the TODO lines and complete the script.
 ```rs
 const SPRING_CONSTANT = 0.001;
 const DAMPING_FACTOR = 0.999;
+set_dt(1.0);
+
 set_g(0.0);
 
 fn apply_spring_force(body) {
