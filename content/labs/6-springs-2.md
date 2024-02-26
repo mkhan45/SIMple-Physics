@@ -160,7 +160,7 @@ fn calculate_kinetic_energy(body) {
     let x = body.get_pos().x;
     let v = body.get_vel();
     let v_mag = v.length;
-    return 0.0 // TODO
+    return 0.0; // TODO
 }
 ```
 
@@ -168,7 +168,7 @@ Finally, update the `calculate_potential_energy()` function:
 ```
 fn calculate_potential_energy(body) {
     let x = body.get_pos().x;
-    return 0.5 * SPRING_CONSTANT * x**2;
+    return 0.0; // TODO
 }
 ```
 
