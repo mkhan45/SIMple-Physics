@@ -7,6 +7,20 @@
 In this lab, you'll use a scriptable online physics engine to
 learn how to simulate springs.
 
+To best understand this lab, follow along with the [walkthrough video](https://youtu.be/_nmbOcUmub8).
+
+The scene we will simulate includes a ball attached to the center of the screen by a spring.
+However, instead of colliding with the center of the screen, it will pass through and oscillate around
+the center. This seems like it would be impossible in the real world, but we can think of
+our simulation as a 2D top-down view of the following image:
+
+![springs](https://static.mikail-khan.com/spring.png)
+
+Since there are two springs at a 45 degree angle, the ball will be pulled to the left and the net
+force on the y-axis will be zero. However, it will not collide with anything when it passes through
+the center. When viewed from the top down, we wouldn't see any separation between the two posts that
+the springs are attached to, so it would appear as a single spring.
+
 ## The Engine
 
 SIMple Physics has two main components: the visualization and the scripting engine.
@@ -43,31 +57,32 @@ The starter code is below. Start by copy pasting it into your script editor. The
 will guide you to fix the TODO lines and complete the script.
 
 ```rs
-const SPRING_CONSTANT = 0.001;
-const DAMPING_FACTOR = 0.999;
+const SPRING_CONSTANT = 0.001; // unit: N/m
+const DAMPING_FACTOR = 0.999; // unit: none
 set_dt(1.0);
 
 set_g(0.0);
 
 fn apply_spring_force(body) {
     draw_body_spring(body);
-    let spring_length = (body.get_pos().x + body.get_vel().x);
+    let spring_length = (body.get_pos().x + body.get_vel().x); // unit: m
 
-    let spring_force = 0.0; // TODO
+    let spring_force = 0.0; // unit: N
     body.add_force(vec(spring_force, 0.0));
 }
 
 fn calculate_kinetic_energy(body) {
-    let m = body.get_mass();
-    let x = body.get_pos().x;
-    let v = body.get_vel();
-    let v_mag = v.length;
-    return 0.0; // TODO
+    let m = body.get_mass(); // unit: kg
+    let x = body.get_pos().x; // unit: m
+    let v = body.get_vel(); // unit: m/s
+    let v_mag = v.length; // unit: m
+    return 0.0; // TODO, unit: J
 }
 
 fn calculate_potential_energy(body) {
-    let x = body.get_pos().x;
-    return 0.0 // TODO
+    let x = body.get_pos().x; // unit: m
+    let m = body.get_mass(); // unit: kg
+    return 0.0 // unit: J
 }
 
 new_graph("Kinetic", 1000, 0, 0, 255);
@@ -139,9 +154,9 @@ Look at the `apply_spring_force()` function:
 ```rs
 fn apply_spring_force(body) {
     draw_body_spring(body);
-    let spring_length = (body.get_pos().x + body.get_vel().x);
+    let spring_length = (body.get_pos().x + body.get_vel().x); // unit: m
 
-    let spring_force = 0.0; // TODO
+    let spring_force = 0.0; // unit: N
     body.add_force(vec(spring_force, 0.0));
 }
 ```
@@ -158,18 +173,19 @@ Next, update the `calculate_kinetic_energy()` function to graph the system. You 
 
 ```rs
 fn calculate_kinetic_energy(body) {
-    let m = body.get_mass();
-    let x = body.get_pos().x;
-    let v = body.get_vel();
-    let v_mag = v.length;
-    return 0.0; // TODO
+    let m = body.get_mass(); // unit: kg
+    let x = body.get_pos().x; // unit: m
+    let v = body.get_vel(); // unit: m/s
+    let v_mag = v.length; // unit: m
+    return 0.0; // TODO, unit: J
 }
 ```
 
 Finally, update the `calculate_potential_energy()` function:
 ```
 fn calculate_potential_energy(body) {
-    let x = body.get_pos().x;
+    let x = body.get_pos().x; // unit: m
+    let m = body.get_mass(); // unit: kg
     return 0.0; // TODO
 }
 ```
